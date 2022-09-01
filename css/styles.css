@@ -127,6 +127,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-title-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-mail-link,
@@ -137,8 +139,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--text-secondary-color);
   display: flex;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-item {
@@ -433,10 +435,14 @@ img {
   justify-content: center;
 }
 
+.clients-item {
+  width: auto;
+  height: auto;
+}
+
 .clients-link {
   fill: #afb1b8;
-  width: 172px;
-  height: 92px;
+  padding: 16px 32px;
   display: flex;
   justify-content: center;
   border: 1px solid #afb1b8;
@@ -491,11 +497,8 @@ img {
   color: var(--background-title-color);
 }
 
-.footer-adress {
-  margin-top: 20px;
-}
-
 .footer-adress-link {
+  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -504,6 +507,7 @@ img {
   color: var(--background-title-color);
   max-width: 211px;
   margin-bottom: 9px;
+  margin-top: 20px;
 }
 .footer-adr {
   margin-bottom: 9px;
@@ -577,25 +581,19 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription-footer {
-  display: block;
-  justify-content: center;
-  align-items: flex-end;
-  margin-left: 93px;
-  width: auto;
-  height: auto;
+.footer-form {
+  margin-left: auto;
 }
 
-.subscription-button {
-  display: flex;
-  align-items: baseline
+.subscription-form {
+ display: flex;
+  align-items: baseline;
 }
 
 .subscription-text {
   top: 0;
   left: 0;
   margin-bottom: 20px;
-  width: 207px;
   height: auto;
   font-weight: 700;
   font-size: 14px;
@@ -603,7 +601,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  
 }
 
 .subscription-input {
@@ -613,9 +610,18 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
- margin-top: 20px;
+  padding: 15px 16px;
+  color: #ffffff;
 }
-  .subscription-btn {
+
+.subscription-input:hover,
+.subscription-input:focus {
+  outline-color: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscription-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -629,16 +635,14 @@ img {
   border-radius: 4px;
   border-color: transparent;
   padding: 10px 28px;
-
   width: auto;
   height: 50px;
   margin-left: 12px;
- }
+}
 
- .subscription-icon {
+.subscription-icon {
   margin-left: 10px;
- }
-
+}
 
 /* ----------------BUTTONS--------------- */
 
@@ -660,6 +664,7 @@ img {
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons-btn:hover,
@@ -711,14 +716,15 @@ img {
   display: block;
 }
 
-.works-item-link:hover,
-.works-item-link:focus {
+.works-item-link:focus,
+.works-item-link:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.works-item:hover .works-top-text {
+.works-item-link:hover .works-top-text,
+.works-item-link:focus .works-top-text {
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -761,6 +767,7 @@ img {
 }
 
 .modal {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -771,7 +778,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 39px 40px 41px;
 }
 
@@ -787,13 +794,22 @@ img {
 }
 
 .modal-form {
+  position: relative;
+  align-items: center;
   margin: 0;
 }
 
+.input-field {
+  margin-bottom: 10px;
+}
+.input-field:last-child {
+  margin-bottom: 0;
+}
+
 .input-wrap {
+  position: relative;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
 }
 
 .form-input {
@@ -802,14 +818,21 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+  transition:
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:hover,
 .form-input:focus {
+  fill: #2196f3;
   outline-color: #2196f3;
+  border-color: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus + .input-icon {
-  fill: #2196f3;
+  fill: var(--link-btn-color);
 }
 
 .input-title {
@@ -817,9 +840,20 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--text-secondary-color);
   display: block;
   margin-bottom: 4px;
+}
+
+.input-textarea {
+  margin-bottom: 20px;
+}
+
+.input-wrap:hover {
+  fill: #2196f3;
+  outline-color: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .coments-form {
@@ -831,8 +865,19 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  margin-bottom: 20px;
+  display: block;
   padding: 12px 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.coments-form:focus,
+.coments-form:hover{
+  fill: #2196f3;
+  outline-color: #2196f3;
+  border-color: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement-text {
@@ -844,6 +889,7 @@ img {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+ justify-content: center;
 }
 
 .chek-link {
@@ -851,9 +897,9 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-   color: var(--link-btn-color);
-   margin-left: 5px;
- }
+  color: var(--link-btn-color);
+  margin-left: 5px;
+}
 
 .agreement-text span {
   width: 16px;
@@ -864,47 +910,26 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chek-icon {
   fill: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- 
+
 .input-chek:checked + .agreement-text span {
-background-color: var(--link-btn-color);
-border-color: var(--link-btn-color);
+  background-color: var(--link-btn-color);
+  border-color: var(--link-btn-color);
 }
 
 .input-chek:checked + .agreement-text .chek-icon {
-  fill: #ffffff ;
+  fill: #ffffff;
 }
 
 .input-chek:focus + .agreement-text span {
   border-color: var(--link-btn-color);
-}
-
-/* .agreement-text::before {
-  content: " ";
-  width: 16px;
-  height: 15px;
-  border: 2px solid #000000;
-  border-radius: 3px;
-  margin-right: 8.38px;
-  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/.input-chek:checked + .agreement-text::before {
-background-color: var(--link-btn-color);
-background-image: url(../imges/Chek-icon.svg);
-background-repeat: no-repeat;
-border: none;
-background-position: center;
-} */
-
-.input-wrap {
-  position: relative;
 }
 
 .input-icon {
@@ -912,13 +937,12 @@ background-position: center;
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-butotn {
-  display: flex;
-  justify-content: center;
-}
+
 .form-btn {
-  position: absolute;
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -933,6 +957,7 @@ background-position: center;
   border-color: transparent;
   padding: 10px 52px;
   height: 50px;
+  margin: 0 auto;
 }
 
 .backdrop.is-hidden .modal {
@@ -953,10 +978,19 @@ background-position: center;
   top: 8px;
   padding: 0;
 }
+.close:hover,
+.close:focus {
+  border-color: var(--link-btn-color);
+}
 
 .hero-btn-close {
   fill: rgba(0, 0, 0, 1);
 }
+
+.hero-btn-close:hover,
+.hero-btn-close:focus {
+  fill: #2196f3;
+} 
 
 
 .is-hidden {
