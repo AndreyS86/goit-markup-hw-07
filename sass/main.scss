@@ -1,3 +1,18 @@
-body { 
-    background-color: aquamarine;
-}
+@import "./utils/var";
+@import "./base/common";
+@import "./utils/hidden";
+@import "./components/container";
+@import "./utils/btn";
+@import "./utils/tags";
+@import "./layouts/header";
+@import "./layouts/hero"; 
+@import "./layouts/peculiarities"; 
+@import "./layouts/about"; 
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer"; 
+@import "./layouts/menu-portfolio"; 
+@import "./layouts/works"; 
+@import "./layouts/backdrop"; 
+@import "./components/modal"; 
+
