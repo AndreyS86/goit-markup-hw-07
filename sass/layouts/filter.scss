@@ -1,11 +1,11 @@
-.menu-portfolio-list {
+.filter__list {
   display: flex;
   column-gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.menu-portfolio-btn {
+.filter__btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -26,9 +26,10 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  &.current-button {
+    color: var(--background-title-color);
+    background-color: var(--link-btn-color);
+  }
 }
 
-.current-button {
-  color: var(--background-title-color);
-  background-color: var(--link-btn-color);
-}
+
