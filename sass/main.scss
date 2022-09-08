@@ -2,7 +2,7 @@
 @import "./base/common";
 @import "./utils/hidden";
 @import "./components/container";
-@import "./utils/btn";
+@import "./components/btn";
 @import "./utils/tags";
 @import "./layouts/header";
 @import "./layouts/hero"; 
@@ -11,8 +11,11 @@
 @import "./layouts/team";
 @import "./layouts/clients";
 @import "./layouts/footer"; 
-@import "./layouts/menu-portfolio"; 
+@import "./layouts/filter";
 @import "./layouts/works"; 
 @import "./layouts/backdrop"; 
 @import "./components/modal"; 
+@import "./components/contacts"; 
+@import "./components/soc.scss"; 
+@import "./components/logo"; 
 
