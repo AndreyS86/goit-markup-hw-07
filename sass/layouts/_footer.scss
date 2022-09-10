@@ -24,6 +24,7 @@ margin-bottom: 20px;
 }
 
 .address__link {
+  font-style: normal;
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -45,6 +46,7 @@ margin-bottom: 20px;
 
  .address__mail,
  .address__tel{
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -73,11 +75,16 @@ margin-bottom: 20px;
   gap: 10px;
   align-items: center;
   margin-left: 70px;
+
 }
 
 
 .soc__link--bcg {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-icon {
+  fill: #ffffff;
 }
 
 .subscription {

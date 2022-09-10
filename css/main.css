@@ -129,7 +129,7 @@ img {
   border-radius: 2px;
   background-color: #2196f3;
   position: absolute;
-  top: 47px;
+  bottom: -2%;
 }
 
 .current {
@@ -389,6 +389,7 @@ img {
 }
 
 .address__link {
+  font-style: normal;
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -409,6 +410,7 @@ img {
 
 .address__mail,
 .address__tel {
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -442,6 +444,10 @@ img {
 
 .soc__link--bcg {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-icon {
+  fill: #ffffff;
 }
 
 .subscription {

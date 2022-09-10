@@ -11,9 +11,8 @@
 }
 
 .header__span {
-color: var(--logo-color);
+  color: var(--logo-color);
 }
-
 
 .navigation {
   display: flex;
@@ -52,12 +51,10 @@ color: var(--logo-color);
     border-radius: 2px;
     background-color: #2196f3;
     position: absolute;
-    top: 47px;
+    bottom: -2%;
   }
 }
-
 
 .current {
   color: var(--link-btn-color);
 }
-
